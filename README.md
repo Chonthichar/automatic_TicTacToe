@@ -37,14 +37,10 @@ and players can restart the game when the game is over using restart button.
       <h6></h6>
       
       <img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
-      
-      <h6></h6>
      - Choose the python version that's right for you.
        - <b>Install Kivy and KivyMD on local terminal.</b> 
-           <h6></h6>
        
        `pip install kivy`
-        <h6></h6>
 
      <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
             <h5></h5>
