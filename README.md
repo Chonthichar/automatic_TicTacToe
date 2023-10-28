@@ -17,7 +17,7 @@ and players can restart the game when the game is over using restart button.
 4) <b>Game process</b>: The game is randomly selects a location on the board to place a mark, no user input request.
 5) <b>Game display</b>: The board plays automatically after each turn until a player "X" or "O" win or ends in a draw.
 6) <b>Tie Game</b>: If a game result in a draw, its return -1.
-   7) <b>Key Function</b>:
+7) <b>Key Function</b>:
        - play_game() : Main function handling the game play.
        - creat_board() : 
        - random_place() : Randomly chooses unoccupied location on the board to place in the player's mark.
@@ -96,8 +96,6 @@ If you'd like to use a pre-existing source, you can clone and install from the f
 `https://github.com/source_name/tic_tac_toe.git`
 
 
-
-
 After all those installation, you are good to go with Tic-tac-toe Kivy application.
 
 Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks operate in an interactive environment, but they are not set up to handle continuous, interactive, standalone GUI applications by default. 
@@ -134,8 +132,6 @@ Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks ope
       - `update_scoreboard()`: Keeping track of wins, loses, and drawis essential for competitive play. The function updates the score every round.
     f. User Interface:
       - `hightlight_win()`: WHen the player wins, this function marks the wining sequence on the board.
-4. 
-
 4. Running the game:
    - It launches the Tic tac toe app, if the scripts is run directly `TicTacToeApp().run()`.
 
