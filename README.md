@@ -1,265 +1,157 @@
-# Import and Initialization
-from kivy.core.window import Window
-from kivy.lang import Builder
-from kivymd.app import MDApp
-from kivymd.uix.button import MDRaisedButton
-import numpy as np
-import random
-from kivy.clock import Clock
+## Tic tac Toe Code
 
-# Setting up the window size
-Window.size = (400, 500)
+### Introduction:
+The given scripts outlines the adoption of automatic computer player for Tic Tac Toe game. 
+This game is developed using Kiv Framework in combination of KivyMD library to enhance the user 
+experience, allowing for a modern and responsive mobile interface. The game features a 3 x 3 grid to serve as a board
+where two players refers as player "X" and player "O", take turn
+aiming to get their marks in a row either horizontally, vertically, or diagonally to win the game.
+The game is declared a draw if all positions on the board are filled without any player achieving
+three marks in a row. The score of each player is displayed at the top of the interface,
+and players can restart the game when the game is over using restart button.
 
-# Design the user Interface by included `KV` string inside python file. This code contains the layout description of a game.
-# It decided how the game UI will look like.
-KV = """
-BoxLayout:
-    orientation: 'vertical'
-    padding: '10dp'
-
-    MDLabel:
-        id: status_label
-        font_style: 'H6'
-        halign: 'center'
-        valign: 'middle'
-        
-    BoxLayout:
-        orientation: 'horizontal'
-        size_hint_y: None
-        padding: [10, 0] 
-
-        MDBoxLayout:
-            orientation: 'vertical'
-            size_hint_x: 0.2
-            padding: [10, 10]
-            size_hint_y: None
-            height: '30dp' 
-            canvas.before:
-                Color:
-                    rgba: [0,0,0,1]  # Border color
-                Line:
-                    rectangle: self.x, self.y, self.width, self.height
-                    width: 1  # Boarder thickness
-
-            MDLabel:
-                id: p1_score
-                text: "Player X: 0"
-                font_size: "14sp"
-                halign: 'center'
-
-        MDLabel:
-            id: combined_score
-            size_hint_x: 0.2 
-            text: "0 - 0"
-            font_size: "18sp"
-            halign: 'center'
-            bold: True
-
-        MDBoxLayout:
-            orientation: 'vertical'
-            size_hint_x: 0.2  # make it wider
-            size_hint_y: None
-            height: '30dp'  
-            padding: [10, 10]
-            canvas.before:
-                Color:
-                    rgba: [0,0,0,1]  # Border color
-                Line:
-                    rectangle: self.x, self.y, self.width, self.height
-                    width: 1 
-
-            MDLabel:
-                id: p2_score
-                text: "Player Y: 0"
-                font_size: "14sp"
-                halign: 'center'
-
-    GridLayout:
-        id: grid
-        rows: 3
-        cols: 3
-        padding: 10, 10
-        spacing: 5, 5
-        width: 100
-        size_hint: 1, 3
-        height: 100
-        font_size: "120sp"
-            
-    BoxLayout:
-        orientation: 'horizontal'
-        Widget:  
-            size_hint_x: 0.5  
-
-        MDRaisedButton:
-            text: "Restart"
-            on_press: app.restart_game()
-            font_size: "12sp"
-        Widget:  
-            size_hint_x: 0.5  
-"""
+### Overview:
+1) <b>Game Objective</b>: Implement Tic-Tac-Toe game using Python.</b>
+2) <b>User Interaction</b>: The game is designed to play automatically by program, without the user put in the mark.
+3) <b>Libraries use</b>: The game is built using Kivy Framework(UI design) and random library in Python.
+4) <b>Game process</b>: The game is randomly selects a location on the board to place a mark, no user input request.
+5) <b>Game display</b>: The board plays automatically after each turn until a player "X" or "O" win or ends in a draw.
+6) <b>Tie Game</b>: If a game result in a draw, its return -1.
+   7) <b>Key Function</b>:
+       - play_game() : Main function handling the game play.
+       - creat_board() : 
+       - random_place() : Randomly chooses unoccupied location on the board to place in the player's mark.
+       - winner() : Check if there is any winning move.
+       - update_scoreboard() : To count the score of player "X" and "Y" until the player exit the game.
+       - The application is initialized and run through the main entry point: 
+   
+         `if __name__ == "__main__":
+       TicTacToeApp().run()`
 
 
-# This class served as the main application and ...
-class TicTacToeApp(MDApp):
+### Set Up the game:
 
-    # Designs the game appearance.
-    def build(self):
-        # self.theme_cls.theme_style = "Dark"
-        self.theme_cls.primary_palette = "BlueGray"
-        return Builder.load_string(KV)
+<b>a) Setting up a new Python project</b>: 
+   - Start by opening PyCharm or VSCode.
+   - Crate new Python project.
+      <h6></h6>
+      ![img.png](img.png)
+      <h6></h6>
+     - Choose the python version that's right for you.
+       - <b>Install Kivy and KivyMD on local terminal.</b> 
+           <h6></h6>
+       
+       `pip install kivy`
+        <h6></h6>
 
-    # This class will be called when the app start and popped up the game parameters, like the game board and current player.
-    def on_start(self):
-        self.board = np.zeros((3, 3), dtype=int)
-        self.win_list = []
-        self.current_player = 1  # Initialize the current player to 1
-        self.new_game()
+         ![img_7.png](img_7.png)
+            <h5></h5>
+       
+       `pip install kivymd`
+           <h6></h6>
+           ![img_8.png](img_8.png)
+     
 
-    # This class is called to set up the new game by clearing the grid and add fresh button to it.
-    def new_game(self):
-        self.board = np.zeros((3, 3), dtype=int)
-        self.root.ids.grid.clear_widgets()
-        for i in range(3):
-            for j in range(3):
-                button = MDRaisedButton(text="", disabled=True, size=(120, 120), size_hint=(10, 9), font_size="40sp")
-                button.i, button.j = i, j
-                self.root.ids.grid.add_widget(button)
-        self.root.ids.status_label.text = "Starting game!"
-        Clock.schedule_once(lambda dt: self.play_game(), 2)
+     
+Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
+      
+<b>b) Running an app using terminal</b>:
+   - Download "tic_tac_toe.py" 
+   - Create a directory for these files, naming its base on your preference.
+   - Open terminal:
 
-    # The main function to handle with the game play. Making random move for each player and check if there is a winner after every move.
-    def play_game(self):
-        winner = 0
-        counter = 1
+     - Create virtual environment (optional).
+     - Navigate to the directory containing your files with the command using 
+      <h6></h6>
+       `cd path_to_folder`
+      <h6></h6>
+     ![img_9.png](img_9.png)
+     <h6></h6>
+     
+     - Update the requirements file with: 
+     <h6></h6>
+       `pip freeze > requirements.txt`
+     <h6></h6>
+      ![img_10.png](img_10.png)
+     <h6></h6>
+     
+     - Install required packages with: 
+     <h6></h6>
+     `pip install -r requirements.txt`
+     <h6></h6>
+     ![img_12.png](img_12.png)
+     <h6></h6>
+     - Execute the script with 
+     <h6></h6>
+       `python tic_tac_toe.py`
+     <h6></h6>
+      ![img_13.png](img_13.png)
+     <h6></h6>
+      ![img_5.png](img_5.png)
+      
+       
+<b>c) Install from the provided source</b>: 
 
-        # Play the move for the current player.
-        self.board = self.random_place(self.board, self.current_player)
-        button = [btn for btn in self.root.ids.grid.children if (btn.i, btn.j) == self.current_loc][0]
-        button.text = "X" if self.current_player == 1 else "O"
-
-        winner = self.Winner(self.board)
-        if winner != 0:
-            if winner == -1:  # Draw condition
-                self.root.ids.status_label.text = "It's a draw!"
-            else:
-                player_name = "Player X" if winner == 1 else "Player Y"
-                self.win_list.append(winner)
-                self.update_scoreboard()
-                self.root.ids.status_label.text = f"{player_name} wins!"
-            return
-
-        # Switch to the other player.
-        self.current_player = 3 - self.current_player  # This will toggle between 1 and 2.
-
-        Clock.schedule_once(lambda dt: self.play_game(), 2)  # Set initialization time.
-
-    # Randomly chooses an unoccupied location on the board for the current player's mark.
-    def random_place(self, board, player):
-        selection = self.possibilities(board)
-        self.current_loc = random.choice(selection)
-        board[self.current_loc] = player
-        return board
-
-    # The possibilities() function selects a random place for the player and returns the board.
-    def possibilities(self, board):
-        l = []
-        for i in range(len(board)):
-            for j in range(len(board)):
-                if board[i][j] == 0:
-                    l.append((i, j))
-        return l
-
-    # Finally, determines whether there is a winner or tie based on the results of the row_win(), col_win(), and diag_win() functions.
-    def Winner(self, board):
-        winner = 0
-        for player in [1, 2]:
-            if self.row_win(board, player) is not None:
-                winner = player
-                self.highlight_win("row", self.row_win(board, player))
-            elif self.col_win(board, player) is not None:
-                winner = player
-                self.highlight_win("col", self.col_win(board, player))
-            elif self.diag_win(board, player) is not None:
-                winner = player
-                self.highlight_win("diag", self.diag_win(board, player))
-        if np.all(board != 0) and winner == 0:
-            winner = -1
-        return winner
-
-    # The row_win(), col_win(), and diag_win() functions check whether the player has three of their marks in a horizontal row, vertical row, or diagonal row, respectively
-    # If so, they return True and win is set to that player. If not, they continue checking until either one of these conditions is met.
-    def row_win(self, board, player):
-        for x in range(len(board)):
-            win = True
-            for y in range(len(board)):
-                if board[x, y] != player:
-                    win = False
-                    continue
-            if win == True:
-                return x  # Return the winning row index
-        return None
-
-    def col_win(self, board, player):
-        for x in range(len(board)):
-            win = True
-            for y in range(len(board)):
-                if board[y][x] != player:
-                    win = False
-                    continue
-            if win == True:
-                return x  # Return the winning column index
-        return None
-
-    def diag_win(self, board, player):
-        win = True
-        for x in range(len(board)):
-            if board[x, x] != player:
-                win = False
-        if win:
-            return "main"  # Main diagonal win.
-        win = True
-        for x in range(len(board)):
-            y = len(board) - 1 - x
-            if board[x, y] != player:
-                win = False
-        if win:
-            return "counter"  # Counter diagonal win.
-        return None
-
-    # `restart_game`: call `new_game` function to reset the game.
-    def restart_game(self):
-        self.new_game()
-
-    # Update the score of each layout for the app layout.
-    def update_scoreboard(self):
-        pX_wins = self.win_list.count(1)
-        pY_wins = self.win_list.count(2)
-        self.root.ids.p1_score.text = f"Player X: {pX_wins}"
-        self.root.ids.p2_score.text = f"Player Y: {pY_wins}"
-        self.root.ids.combined_score.text = f" {pX_wins} - {pY_wins}"
-
-    # Highlighting color for  the winning cells.
-    def highlight_win(self, win_type, index):
-        if win_type == "row":
-            for y in range(len(self.board)):
-                btn = [btn for btn in self.root.ids.grid.children if (btn.i, btn.j) == (index, y)][0]
-                btn.md_bg_color = (1, 0, 0, 1)  # Color to highlight sequence grid after there is a winner.
-        elif win_type == "col":
-            for x in range(len(self.board)):
-                btn = [btn for btn in self.root.ids.grid.children if (btn.i, btn.j) == (x, index)][0]
-                btn.md_bg_color = (1, 0, 0, 1)
-        elif win_type == "diag":
-            if index == "main":
-                for x in range(len(self.board)):
-                    btn = [btn for btn in self.root.ids.grid.children if (btn.i, btn.j) == (x, x)][0]
-                    btn.md_bg_color = (1, 0, 0, 1)
-            else:  # counter diagonal
-                for x in range(len(self.board)):
-                    y = len(self.board) - 1 - x
-                    btn = [btn for btn in self.root.ids.grid.children if (btn.i, btn.j) == (x, y)][0]
-                    btn.md_bg_color = (1, 0, 0, 1)
+If you'd like to use a pre-existing source, you can clone and install from the following GitHub repository:
+`https://github.com/source_name/tic_tac_toe.git`
 
 
-# Run the game
-if __name__ == "__main__":
-    TicTacToeApp().run()
+
+
+After all those installation, you are good to go with Tic-tac-toe Kivy application.
+
+Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks operate in an interactive environment, but they are not set up to handle continuous, interactive, standalone GUI applications by default. 
+
+### Code Summary:
+1. Import and Initialization
+   - Libraries and modules are imported like `kivy`, `kivymd`, `numpy`, `random`, and `Clock`.
+   - The window size for the app is set to 400 x 500 pixels.
+   
+2. Kivy Design:
+   - A Kivy language string (`KV`) is implemented to define the app layout includes, 
+      - The game status label at the top.
+      - A  3 x 3 grid layout for the board
+      - Scores labels for two players display on the left and right, 
+      - A`Restart` button at the bottom.
+     
+3. Implementing the game logic:
+
+    a. Application Initialization:
+      - `TicTacToeApp`: class is derived from `MDApp` knows as the main application class, th primary class for building mobil app using python.
+    b. Setting up the game Interface: 
+      - `build()`: Its loads the Kivy string which define the UI and sets up the app theme.
+    c. Starting the game:
+      - `on_start()`: When the game kickoff , this function is called to display the board and players.
+    d. Game play Mechanics:
+      - `play_game()`: Making random move for each player and check if there is a winner after every move.
+        - `random_place()`: Place the mark randomly for current player on the board. 
+           - Then `possibilities()`: will find all empty spot on the board to ensure the placement is valid.
+        - `Winner()`: Check if there is any winner or the game is a draw -1, if the game is draw. It utilizes helper function to achieve this.
+           - The same as `row_win()`, `col_win()`, `diag_win()`: Check for winning condition in rows, columns, and diagonal.
+    e. Game Restart and Score Keeping:
+      - `new_game()`: If player wish to play again or restart midway, this function restart the board, ensuring  fresh start.
+      - `restart_game`: call `new_game` function to reset the game.
+      - `update_scoreboard()`: Keeping track of wins, loses, and drawis essential for competitive play. The function updates the score every round.
+    f. User Interface:
+      - `hightlight_win()`: WHen the player wins, this function marks the wining sequence on the board.
+4. 
+
+4. Running the game:
+   - It launches the Tic tac toe app, if the scripts is run directly `TicTacToeApp().run()`.
+
+### How the game works:
+   - Run the Scripts.
+   - The board is created and the game initialized after 2 seconds.
+   - Player "X" or "Y" mark random positions on the board.
+   - The board is printed after every move. Both takes turn until someone gets three of their symbols in a row, either horizontally, vertically, or diagonally.
+   - The game check for winning conditions after every move, row, column, diagonal after each move.
+   - The game will announced if the winning is found; if not, the game declare a draw after 9 move.
+   - An option to ask the player if they want the program to play again, "Restart". 
+   - The tally scores of players "X" and "O" until the player exits the game.
+
+### Conclusion: 
+This implementation of automatic Tic Tac Toe capitalizes on the capabilities of the Kivy and KivyMD libraries
+to create an interactive game interface. The code clearly outlines the structure of each function, such as checking for a win 
+or making a move. Furthermore, the game provides feedback to the player through the score display and status label,
+The restart function ensures players can quickly jump into a new game after each round. Overall,
+this version of Tic Tac Toe merges traditional game mechanics with modern programing techniques to offer an enjoyable digital gaming experience.
