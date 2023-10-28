@@ -26,7 +26,7 @@ and players can restart the game when the game is over using restart button.
        - The application is initialized and run through the main entry point: 
    
          `if __name__ == "__main__":
-       TicTacToeApp().run()`
+              TicTacToeApp().run()`
 
 
 ### Set Up the game:
