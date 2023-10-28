@@ -36,7 +36,7 @@ and players can restart the game when the game is over using restart button.
    - Create new Python project.
       <h6></h6>
       
-      <img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 200px">
+      <img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
       
       <h6></h6>
      - Choose the python version that's right for you.
@@ -46,14 +46,13 @@ and players can restart the game when the game is over using restart button.
        `pip install kivy`
         <h6></h6>
 
-         ![img_7.png](img_7.png)
+          <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
             <h5></h5>
        
        `pip install kivymd`
            <h6></h6>
-           ![img_8.png](img_8.png)
+     <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
      
-
      
 Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
       
@@ -67,29 +66,29 @@ Then, Make sure you have installed all the required packages. Execute the comman
       <h6></h6>
        `cd path_to_folder`
       <h6></h6>
-     ![img_9.png](img_9.png)
+     <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
      <h6></h6>
      
      - Update the requirements file with: 
      <h6></h6>
        `pip freeze > requirements.txt`
      <h6></h6>
-      ![img_10.png](img_10.png)
+      <img src="./assets/pipFreeze.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
      <h6></h6>
      
      - Install required packages with: 
      <h6></h6>
      `pip install -r requirements.txt`
      <h6></h6>
-     ![img_12.png](img_12.png)
+     <img src="./assets/require.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
      <h6></h6>
      - Execute the script with 
      <h6></h6>
        `python tic_tac_toe.py`
      <h6></h6>
-      ![img_13.png](img_13.png)
+      <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
      <h6></h6>
-      ![img_5.png](img_5.png)
+      <img src="./assets/game.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
       
        
 <b>c) Install from the provided source</b>: 
