@@ -80,9 +80,10 @@ Then, Make sure you have installed all the required packages. Execute the comman
 
        `python tic_tac_toe.py`
      
-      <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
+
+      <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="300"/>
      
-      <img src="./assets/game.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="150"/>
+      <img src="./assets/game.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="300"/>
 
       
        
