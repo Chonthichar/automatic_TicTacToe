@@ -44,12 +44,12 @@ and players can restart the game when the game is over using restart button.
        
      `pip install kivy`
 
-
-     <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
+       <h6></h6>
+     <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
        
      `pip install kivymd`
-     <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
+     <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
      
 Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
