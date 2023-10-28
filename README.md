@@ -55,7 +55,7 @@ and players can restart the game when the game is over using restart button.
      
 Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
       
-### <b>Option b) Running an app using terminal</b>:
+### <b>Option b) Running an app using terminal (Python is required in your local machine to be pre-installed)</b>:
    - Download "tic_tac_toe.py" 
    - Create a directory for these files, naming its base on your preference.
    - Open terminal:
