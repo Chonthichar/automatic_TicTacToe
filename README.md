@@ -31,7 +31,7 @@ and players can restart the game when the game is over using restart button.
 
 ## Set Up the game:
 
-<b>Option a) Setting up a new Python project</b>: 
+### <b>Option a) Setting up a new Python project</b>: 
    - Start by opening PyCharm or VSCode.
    - Create new Python project.
       
@@ -55,7 +55,7 @@ and players can restart the game when the game is over using restart button.
      
 Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
       
-<b>Option b) Running an app using terminal</b>:
+### <b>Option b) Running an app using terminal</b>:
    - Download "tic_tac_toe.py" 
    - Create a directory for these files, naming its base on your preference.
    - Open terminal:
@@ -96,7 +96,7 @@ Then, Make sure you have installed all the required packages. Execute the comman
 
       
        
-<b>Option c) Install from the provided source</b>: 
+### <b>Option c) Install from the provided source</b>: 
 
 If you'd like to use a pre-existing source, you can clone and install from the following GitHub repository:
 `gh repo clone Chonthichar/automatic_TicTacToe`
@@ -106,7 +106,7 @@ After all those installation, you are good to go with Tic-tac-toe Kivy applicati
 
 Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks operate in an interactive environment, but they are not set up to handle continuous, interactive, standalone GUI applications by default. 
 
-### Code Summary:
+## Code Summary:
 <b>1. Import and Initialization</b>
    - Libraries and modules are imported like `kivy`, `kivymd`, `numpy`, `random`, and `Clock`.
    - The window size for the app is set to 400 x 500 pixels.
@@ -149,7 +149,7 @@ Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks ope
 <b>4. Running the game:</b>
    - It launches the Tic tac toe app, if the scripts is run directly `TicTacToeApp().run()`.
 
-### How the game works:
+## How the game works:
    - Run the Scripts.
    - The board is created and the game initialized after 2 seconds.
    - Player "X" or "Y" mark random positions on the board.
@@ -159,7 +159,7 @@ Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks ope
    - An option to ask the player if they want the program to play again, "Restart". 
    - The tally scores of players "X" and "O" until the player exits the game.
 
-### Conclusion: 
+## Conclusion: 
 This implementation of automatic Tic Tac Toe capitalizes on the capabilities of the Kivy and KivyMD libraries
 to create an interactive game interface. The code clearly outlines the structure of each function, such as checking for a win 
 or making a move. Furthermore, the game provides feedback to the player through the score display and status label,
