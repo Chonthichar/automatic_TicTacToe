@@ -34,10 +34,10 @@ and players can restart the game when the game is over using restart button.
 <b>a) Setting up a new Python project</b>: 
    - Start by opening PyCharm or VSCode.
    - Create new Python project.
-      <h6></h6>
       
       <img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
      - Choose the python version that's right for you.
+     
        - <b>Install Kivy and KivyMD on local terminal.</b> 
        
      `pip install kivy`
@@ -62,7 +62,7 @@ Then, Make sure you have installed all the required packages. Execute the comman
      <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
 
      - Update the requirements file with:
-     - 
+     
      `pip freeze > requirements.txt`
    
       <img src="./assets/pipFreeze.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
@@ -97,6 +97,7 @@ Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks ope
 <b>1. Import and Initialization</b>
    - Libraries and modules are imported like `kivy`, `kivymd`, `numpy`, `random`, and `Clock`.
    - The window size for the app is set to 400 x 500 pixels.
+
    
 <b>2. Kivy Design:</b>
    - A Kivy language string (`KV`) is implemented to define the app layout includes, 
@@ -104,27 +105,35 @@ Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks ope
       - A  3 x 3 grid layout for the board
       - Scores labels for two players display on the left and right, 
       - A`Restart` button at the bottom.
+
      
 <b>3. Implementing the game logic:</b>
 
+
 a. Application Initialization:
       - `TicTacToeApp`: class is derived from `MDApp` knows as the main application class, th primary class for building mobil app using python.
+      
 b. Setting up the game Interface: 
       - `build()`: Its loads the Kivy string which define the UI and sets up the app theme.
+      
 c. Starting the game:
       - `on_start()`: When the game kickoff , this function is called to display the board and players.
+      
 d. Game play Mechanics:
       - `play_game()`: Making random move for each player and check if there is a winner after every move.
         - `random_place()`: Place the mark randomly for current player on the board. 
            - Then `possibilities()`: will find all empty spot on the board to ensure the placement is valid.
         - `Winner()`: Check if there is any winner or the game is a draw -1, if the game is draw. It utilizes helper function to achieve this.
            - The same as `row_win()`, `col_win()`, `diag_win()`: Check for winning condition in rows, columns, and diagonal.
+           
 e. Game Restart and Score Keeping:
       - `new_game()`: If player wish to play again or restart midway, this function restart the board, ensuring  fresh start.
       - `restart_game`: call `new_game` function to reset the game.
       - `update_scoreboard()`: Keeping track of wins, loses, and drawis essential for competitive play. The function updates the score every round.
+      
 f. User Interface:
       - `hightlight_win()`: WHen the player wins, this function marks the wining sequence on the board.
+      
 <b>4. Running the game:</b>
    - It launches the Tic tac toe app, if the scripts is run directly `TicTacToeApp().run()`.
 
