@@ -1,4 +1,4 @@
-## Tic tac Toe Code
+## Automatic computer player for Tic tac Toe Code
 
 ### Introduction:
 The given scripts outlines the adoption of automatic computer player for Tic Tac Toe game. 
@@ -11,7 +11,7 @@ three marks in a row. The score of each player is displayed at the top of the in
 and players can restart the game when the game is over using restart button.
 
 ### Overview:
-1) <b>Game Objective</b>: Implement Tic-Tac-Toe game using Python.</b>
+1) <b>Game Objective</b>: Implement automatic computer player for Tic-Tac-Toe game using Python.</b>
 2) <b>User Interaction</b>: The game is designed to play automatically by program, without the user put in the mark.
 3) <b>Libraries use</b>: The game is built using Kivy Framework(UI design) and random library in Python.
 4) <b>Game process</b>: The game is randomly selects a location on the board to place a mark, no user input request.
