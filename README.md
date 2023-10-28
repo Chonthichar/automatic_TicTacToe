@@ -1,6 +1,6 @@
-## Automatic computer player for Tic tac Toe Code
+# Automatic computer player for Tic tac Toe Code
 
-### Introduction:
+## Introduction:
 The given scripts outlines the adoption of automatic computer player for Tic Tac Toe game. 
 This game is developed using Kiv Framework in combination of KivyMD library to enhance the user 
 experience, allowing for a modern and responsive mobile interface. The game features a 3 x 3 grid to serve as a board
@@ -10,7 +10,7 @@ The game is declared a draw if all positions on the board are filled without any
 three marks in a row. The score of each player is displayed at the top of the interface,
 and players can restart the game when the game is over using restart button.
 
-### Overview:
+## Overview:
 1) <b>Game Objective</b>: Implement automatic computer player for Tic-Tac-Toe game using Python.</b>
 2) <b>User Interaction</b>: The game is designed to play automatically by program, without the user put in the mark.
 3) <b>Libraries use</b>: The game is built using Kivy Framework(UI design) and random library in Python.
@@ -29,7 +29,7 @@ and players can restart the game when the game is over using restart button.
               TicTacToeApp().run()`
 
 
-### Set Up the game:
+## Set Up the game:
 
 <b>Option a) Setting up a new Python project</b>: 
    - Start by opening PyCharm or VSCode.
@@ -49,6 +49,7 @@ and players can restart the game when the game is over using restart button.
 
        
      `pip install kivymd`
+     <h6></h6>
      <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
      
