@@ -99,7 +99,8 @@ Then, Make sure you have installed all the required packages. Execute the comman
 ### <b>Option c) Install from the provided source</b>: 
 
 If you'd like to use a pre-existing source, you can clone and install from the following GitHub repository:
-`gh repo clone Chonthichar/automatic_TicTacToe`
+
+`git clone https://github.com/Chonthichar/automatic_TicTacToe.git`
 
 
 After all those installation, you are good to go with Tic-tac-toe Kivy application.
