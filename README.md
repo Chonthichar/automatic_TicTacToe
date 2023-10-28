@@ -31,7 +31,7 @@ and players can restart the game when the game is over using restart button.
 
 ### Set Up the game:
 
-<b>a) Setting up a new Python project</b>: 
+<b>Option a) Setting up a new Python project</b>: 
    - Start by opening PyCharm or VSCode.
    - Create new Python project.
       
@@ -54,7 +54,7 @@ and players can restart the game when the game is over using restart button.
      
 Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
       
-<b>b) Running an app using terminal</b>:
+<b>Option b) Running an app using terminal</b>:
    - Download "tic_tac_toe.py" 
    - Create a directory for these files, naming its base on your preference.
    - Open terminal:
@@ -95,7 +95,7 @@ Then, Make sure you have installed all the required packages. Execute the comman
 
       
        
-<b>c) Install from the provided source</b>: 
+<b>Option c) Install from the provided source</b>: 
 
 If you'd like to use a pre-existing source, you can clone and install from the following GitHub repository:
 `gh repo clone Chonthichar/automatic_TicTacToe`
