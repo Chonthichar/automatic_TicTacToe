@@ -118,28 +118,28 @@ Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks ope
      
 <b>3. Implementing the game logic:</b>
 
-       a. Application Initialization:
-             - `TicTacToeApp`: class is derived from `MDApp` knows as the main application class, th primary class for building mobil app using python.
+    a. Application Initialization:
+             - `TicTacToeApp()`: class is derived from `MDApp` knows as the main application class, th primary class for building mobil app using python.
              
-       b. Setting up the game Interface: 
+    b. Setting up the game Interface: 
              - `build()`: Its loads the Kivy string which define the UI and sets up the app theme.
              
-       c. Starting the game:
+    c. Starting the game:
              - `on_start()`: When the game kickoff , this function is called to display the board and players.
              
-       d. Game play Mechanics:
+    d. Game play Mechanics:
              - `play_game()`: Making random move for each player and check if there is a winner after every move.
                - `random_place()`: Place the mark randomly for current player on the board. 
                   - Then `possibilities()`: will find all empty spot on the board to ensure the placement is valid.
                - `Winner()`: Check if there is any winner or the game is a draw -1, if the game is draw. It utilizes helper function to achieve this.
                   - The same as `row_win()`, `col_win()`, `diag_win()`: Check for winning condition in rows, columns, and diagonal.
                   
-       e. Game Restart and Score Keeping:
+    e. Game Restart and Score Keeping:
              - `new_game()`: If player wish to play again or restart midway, this function restart the board, ensuring  fresh start.
              - `restart_game`: call `new_game` function to reset the game.
              - `update_scoreboard()`: Keeping track of wins, loses, and drawis essential for competitive play. The function updates the score every round.
              
-       f. User Interface:
+    f. User Interface:
              - `hightlight_win()`: WHen the player wins, this function marks the wining sequence on the board.
       
 <b>4. Running the game:</b>
