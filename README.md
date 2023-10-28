@@ -36,7 +36,7 @@ and players can restart the game when the game is over using restart button.
    - Create new Python project.
       <h6></h6>
       
-      <img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
+      <img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
       
       <h6></h6>
      - Choose the python version that's right for you.
@@ -46,12 +46,12 @@ and players can restart the game when the game is over using restart button.
        `pip install kivy`
         <h6></h6>
 
-          <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
+     <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
             <h5></h5>
        
        `pip install kivymd`
            <h6></h6>
-     <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
+     <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
      
      
 Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
@@ -66,7 +66,7 @@ Then, Make sure you have installed all the required packages. Execute the comman
       <h6></h6>
        `cd path_to_folder`
       <h6></h6>
-     <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
+     <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
      <h6></h6>
      
      - Update the requirements file with: 
@@ -80,15 +80,15 @@ Then, Make sure you have installed all the required packages. Execute the comman
      <h6></h6>
      `pip install -r requirements.txt`
      <h6></h6>
-     <img src="./assets/require.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
+     <img src="./assets/require.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
      <h6></h6>
      - Execute the script with 
      <h6></h6>
        `python tic_tac_toe.py`
      <h6></h6>
-      <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
+      <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
      <h6></h6>
-      <img src="./assets/game.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 100px">
+      <img src="./assets/game.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 50px">
       
        
 <b>c) Install from the provided source</b>: 
@@ -102,18 +102,18 @@ After all those installation, you are good to go with Tic-tac-toe Kivy applicati
 Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks operate in an interactive environment, but they are not set up to handle continuous, interactive, standalone GUI applications by default. 
 
 ### Code Summary:
-1. Import and Initialization
+<b>1. Import and Initialization</b>
    - Libraries and modules are imported like `kivy`, `kivymd`, `numpy`, `random`, and `Clock`.
    - The window size for the app is set to 400 x 500 pixels.
    
-2. Kivy Design:
+<b>2. Kivy Design:</b>
    - A Kivy language string (`KV`) is implemented to define the app layout includes, 
       - The game status label at the top.
       - A  3 x 3 grid layout for the board
       - Scores labels for two players display on the left and right, 
       - A`Restart` button at the bottom.
      
-3. Implementing the game logic:
+<b>3. Implementing the game logic:</b>
 
     a. Application Initialization:
       - `TicTacToeApp`: class is derived from `MDApp` knows as the main application class, th primary class for building mobil app using python.
@@ -133,7 +133,7 @@ Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks ope
       - `update_scoreboard()`: Keeping track of wins, loses, and drawis essential for competitive play. The function updates the score every round.
     f. User Interface:
       - `hightlight_win()`: WHen the player wins, this function marks the wining sequence on the board.
-4. Running the game:
+<b>4. Running the game:</b>
    - It launches the Tic tac toe app, if the scripts is run directly `TicTacToeApp().run()`.
 
 ### How the game works:
