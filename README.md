@@ -33,9 +33,10 @@ and players can restart the game when the game is over using restart button.
 
 <b>a) Setting up a new Python project</b>: 
    - Start by opening PyCharm or VSCode.
-   - Crate new Python project.
+   - Create new Python project.
       <h6></h6>
       ![img.png](img.png)
+      <img src="./assets/Screenshot 2023-08-16 191056.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" style="display: inline-block; margin: 0 auto; max-width: 200px">
       <h6></h6>
      - Choose the python version that's right for you.
        - <b>Install Kivy and KivyMD on local terminal.</b> 
