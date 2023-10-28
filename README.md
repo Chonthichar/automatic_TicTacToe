@@ -104,7 +104,7 @@ If you'd like to use a pre-existing source, you can clone and install from the f
 
 After all those installation, you are good to go with Tic-tac-toe Kivy application.
 
-Note: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks operate in an interactive environment, but they are not set up to handle continuous, interactive, standalone GUI applications by default. 
+<b>Note</b>: Kivy app can not be run on Jupyter notebooks, due to jupyter notebooks operate in an interactive environment, but they are not set up to handle continuous, interactive, standalone GUI applications by default. 
 
 ## Code Summary:
 <b>1. Import and Initialization</b>
