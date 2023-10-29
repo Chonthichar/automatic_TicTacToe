@@ -49,7 +49,7 @@ and players can restart the game when the game is over using restart button.
        <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
      
-Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
+Then, make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your screen.
       
 ### <b>Option b) Running an app using terminal (Python is required in your local machine to be pre-installed)</b>:
    - Download "tic_tac_toe.py" 
