@@ -1,4 +1,4 @@
-# Automatic computer player for Tic tac Toe Code
+# Automatic computer player for Tic tac Toe 
 
 ## Introduction:
 The given scripts outlines the adoption of automatic computer player for Tic Tac Toe game. 
