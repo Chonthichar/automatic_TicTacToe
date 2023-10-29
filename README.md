@@ -35,22 +35,22 @@ and players can restart the game when the game is over using restart button.
    - Start by opening PyCharm or VSCode.
    - Create new Python project.
       
-      <img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="400"/>
+<img src="./assets/Screenshot 2023-10-28 195746.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="400"/>
 
       
      - Choose the python version that's right for you.
      
        - <b>Install Kivy and KivyMD on local terminal.</b> 
        
-            `pip install kivy`
+              `pip install kivy`
 
        <h6></h6>
-     <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
+<img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
        
-            `pip install kivymd`
+              `pip install kivymd`
      <h6></h6>
-     <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
+<img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
      
 Then, Make sure you have installed all the required packages. Execute the command within your Python environment. A Kivy window will appear on your display.
@@ -65,7 +65,7 @@ Then, Make sure you have installed all the required packages. Execute the comman
      
             `cd path_to_folder`
 
-            <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
+       <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
      
      - Install necessary libaries:
        
@@ -80,14 +80,14 @@ Then, Make sure you have installed all the required packages. Execute the comman
             `pip freeze > requirements.txt`
      
    
-             <img src="./assets/pipFreeze.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
+       <img src="./assets/pipFreeze.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
     
 
      - Install required packages with: 
      
             `pip install -r requirements.txt`
      
-            <img src="./assets/require.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
+       <img src="./assets/require.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
      
      - Execute the script with 
 
