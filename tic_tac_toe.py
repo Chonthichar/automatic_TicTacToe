@@ -70,7 +70,7 @@ BoxLayout:
 
             MDLabel:
                 id: p2_score
-                text: "Player Y: 0"
+                text: "Player O: 0"
                 font_size: "14sp"
                 halign: 'center'
 
