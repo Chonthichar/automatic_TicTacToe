@@ -39,8 +39,7 @@ and players can restart the game when the game is over using restart button.
 
       
    - Choose the python version that's right for you.
-     
-    - <b>Install Kivy and KivyMD on local terminal.</b> 
+     - <b>Install Kivy and KivyMD on local terminal.</b> 
        
        
               pip install kivy
@@ -48,7 +47,7 @@ and players can restart the game when the game is over using restart button.
 <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
        
-              `pip install kivymd`
+              pip install kivymd
     
 <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
@@ -63,21 +62,21 @@ Then, Make sure you have installed all the required packages. Execute the comman
      - Create virtual environment (optional).
      - Navigate to the directory containing your files with the command using.
      
-            `cd path_to_folder`
+            cd path_to_folder
 
        <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
      
      - Install necessary libaries:
        
-            `pip install kivy`
+            pip install kivy
 
-            `pip install kivymd`
+            pip install kivymd
 
-            `pip install numpy`
+            pip install numpy
 
      - Update the requirements file that lists all of the packages in the current environment, as well as their respective version:
      
-            `pip freeze > requirements.txt`
+            pip freeze > requirements.txt
      
    
        <img src="./assets/pipFreeze.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
@@ -85,13 +84,13 @@ Then, Make sure you have installed all the required packages. Execute the comman
 
      - Install required packages with: 
      
-            `pip install -r requirements.txt`
+            pip install -r requirements.txt
      
        <img src="./assets/require.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
      
      - Execute the script with 
 
-              `python tic_tac_toe.py`
+              python tic_tac_toe.py
      
 
       <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
@@ -108,7 +107,7 @@ Then, Make sure you have installed all the required packages. Execute the comman
 
 If you'd like to use a pre-existing source, you can clone and install from the following GitHub repository:
 
-`git clone https://github.com/Chonthichar/automatic_TicTacToe.git`
+       git clone https://github.com/Chonthichar/automatic_TicTacToe.git
 
 
 After all those installation, you are good to go with Tic-tac-toe Kivy application.
