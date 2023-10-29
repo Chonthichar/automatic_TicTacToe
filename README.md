@@ -95,7 +95,8 @@ Then, make sure you have installed all the required packages. Execute the comman
      - After executed the code, the app then displays on your screen:
       
      <h6></h6>
-              <img src="./assets/game.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="350"/>
+       
+       <img src="./assets/game.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="350"/>
 
       
        
