@@ -58,26 +58,26 @@ Then, Make sure you have installed all the required packages. Execute the comman
 ### <b>Option b) Running an app using terminal (Python is required in your local machine to be pre-installed)</b>:
    - Download "tic_tac_toe.py" 
    - Create a directory for these files, naming its base on your preference.
-   - Open terminal:
+   - Open the terminal:
 
      - Create virtual environment (optional).
      - Navigate to the directory containing your files with the command using.
      
-     `cd path_to_folder`
+            `cd path_to_folder`
 
      <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
      
      - Install necessary libaries:
        
-     `pip install kivy`
+            `pip install kivy`
 
-     `pip install kivymd`
+            `pip install kivymd`
 
-     `pip install numpy`
+            `pip install numpy`
 
      - Update the requirements file that lists all of the packages in the current environment, as well as their respective version:
      
-     `pip freeze > requirements.txt`
+            `pip freeze > requirements.txt`
      
    
       <img src="./assets/pipFreeze.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
@@ -85,13 +85,13 @@ Then, Make sure you have installed all the required packages. Execute the comman
 
      - Install required packages with: 
      
-     `pip install -r requirements.txt`
+            `pip install -r requirements.txt`
      
      <img src="./assets/require.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
      
      - Execute the script with 
 
-       `python tic_tac_toe.py`
+              `python tic_tac_toe.py`
      
 
       <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
