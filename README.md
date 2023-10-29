@@ -63,7 +63,7 @@ Then, make sure you have installed all the required packages. Execute the comman
 
        <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
      
-     - Install necessary libaries:
+     - Install necessary libaries in your environments:
        
             pip install kivy
 
