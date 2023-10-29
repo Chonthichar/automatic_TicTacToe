@@ -41,12 +41,10 @@ and players can restart the game when the game is over using restart button.
    - Choose the python version that's right for you.
      - <b>Install Kivy and KivyMD on local terminal.</b> 
        
-       
               pip install kivy
 
 <img src="./assets/kivy.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
 
-       
               pip install kivymd
     
 <img src="./assets/kivymd.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="600"/>
@@ -92,8 +90,7 @@ Then, Make sure you have installed all the required packages. Execute the comman
 
               python tic_tac_toe.py
      
-
-      <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
+       <img src="./assets/open.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
       <h6></h6>
       
      - After executed the code, the app then displays on your screen:
