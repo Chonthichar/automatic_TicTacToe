@@ -66,8 +66,16 @@ Then, Make sure you have installed all the required packages. Execute the comman
      `cd path_to_folder`
 
      <img src="./assets/cdDown.png" alt="Input the instagram username you want to scrape in the 'username_input' field" title="Input the instagram username you want to scrape in the 'username_input' field" width="500"/>
+     
+     - Install necessary libaries:
+       
+     `pip install kivy`
 
-     - Update the requirements file with:
+     `pip install kivymd`
+
+     `pip install numpy`
+
+     - Update the requirements file that lists all of the packages in the current environment, as well as their respective version:
      
      `pip freeze > requirements.txt`
      
